@@ -14,15 +14,17 @@ def DFS(v):
             DFS(i)
 
 def BFS(v):
+    global cnt
     queue = [v]
     check[v] = 1
     while queue:
-        v = queue.pop(0)
-        print(v, end = ' ')
+        v = queue[0]
+        del queue[0]
         for i in range(1,n+1):
             if (check[i] != 1 and arr[v][i]):
                 queue.append(i)
-                b[i] = 1
+                cnt+=1
+                check[i] = 1
 
 #배열 초기화            
 for i in range(m):
