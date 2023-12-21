@@ -3,12 +3,8 @@
 
 import sys
 n, l = map(int,input().split())
-k=0
-if (n==1 and l==2):         #예외처리)n==0일시 두번째 for문이 실행되지않음 
-    print('0 1')
-    sys.exit()
+k=-1
 for m in range(l-1,100):
-    mid = n // 2
     start = 0
     end = n
     while(end>=0):          #end가 음수가 되면 음수를 포함한 리스트를 출력할 수 있음 ex) 5 5 -> -1 0 1 2 3 
